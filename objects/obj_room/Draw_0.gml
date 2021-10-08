@@ -10,4 +10,3 @@ if obj_gameManager.startRoom == id {
 }
 
 draw_rectangle(x,y,x+(global.tile_size*width),y+(global.tile_size*height),true);
-draw_self();

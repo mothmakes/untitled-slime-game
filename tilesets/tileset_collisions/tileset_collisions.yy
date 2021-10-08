@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprite2",
-    "path": "sprites/sprite2/sprite2.yy",
+    "name": "spr_tileset_collisions",
+    "path": "sprites/spr_tileset_collisions/spr_tileset_collisions.yy",
   },
   "tileWidth": 16,
   "tileHeight": 16,
