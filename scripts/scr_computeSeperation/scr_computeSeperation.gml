@@ -18,7 +18,7 @@ function scr_computeSeperation() {
 
 	//Compounds a vector based on the number of close rooms
 	for(var i = 0;i < _number;i++) {
-		var _agent = instance_find(obj_marker,i);
+		var _agent = instance_find(obj_room,i);
 		if _agent != _myAgent {
 		
 			// Dramatically increases vector if the rooms occupy the same space

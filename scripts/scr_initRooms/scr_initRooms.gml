@@ -14,11 +14,11 @@ function scr_initRooms() {
 	var _roomPositions = [];
 	var _roomDimensions = [];
 
-	instance_destroy(obj_marker);
+	instance_destroy(obj_room);
 
 	draw_set_colour(c_white);
 
-	//Creates the set of rooms as markers
+	//Creates the set of rooms as rooms
 	for(var i=0;i<room_count;i++) {
 		//Gets a point in the circle for the start
 		_roomPositions[i] = scr_getRandomPointInCircle(radius);
@@ -30,12 +30,12 @@ function scr_initRooms() {
 	
 		_roomDimensions[i] = [_width,_height];
 	
-		//Creates the markers for the rooms
-		var _marker = instance_create_layer(_point[0],_point[1],"Instances",obj_marker);
+		//Creates the rooms for the rooms
+		var _room = instance_create_layer(_point[0],_point[1],"Instances",obj_room);
 	
 		//Sets their variables to the generated size
-		_marker.width = _width;
-		_marker.height = _height;
+		_room.width = _width;
+		_room.height = _height;
 	
 	}
 

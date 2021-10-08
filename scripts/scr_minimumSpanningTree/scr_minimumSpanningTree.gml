@@ -1,12 +1,12 @@
 function scr_minimumSpanningTree() {
 	// Starts by finding central node, uses it as start of tree.
 	midNode = scr_findCentreNode();
-	reachSet = [markers[midNode]];
+	reachSet = [rooms[midNode]];
 
 	// Creates list of nodes not visited
 	unreachSet = ds_list_create();
-	for (var i = 0;i<array_length_1d(markers);i++) {
-		ds_list_add(unreachSet,markers[i]);
+	for (var i = 0;i<array_length_1d(rooms);i++) {
+		ds_list_add(unreachSet,rooms[i]);
 	}
 	ds_list_delete(unreachSet,midNode);
 

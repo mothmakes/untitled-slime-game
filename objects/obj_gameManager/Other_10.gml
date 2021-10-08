@@ -4,9 +4,9 @@ var _tile = global.tile_size;
 
 //Initialise the tilemap
 Map = layer_tilemap_create("Tiles_1",0,0,tileset_basic,room_width div _tile,room_height div _tile)
-with obj_gameManager Map = obj_generatorManager.Map;
+//with obj_gameManager Map = obj_generatorManager.Map;
 CollisionMap = layer_tilemap_create("Collisions",0,0,tileset_collisions,room_width div _tile,room_height div _tile)
-with obj_gameManager CollisionMap = obj_generatorManager.CollisionMap;
+//with obj_gameManager CollisionMap = obj_generatorManager.CollisionMap;
 
 //Fill the tilemap with blank tiles
 for (var i=0;i<room_width div _tile;i++) {
@@ -69,8 +69,8 @@ for (var i = 0;i<array_length_1d(tree);i++) {
 }
 
 //Tiles the rooms
-for (var i=0;i<array_length_1d(markers);i++) {
-	var _start = [markers[i].x/_tile,markers[i].y/_tile]
+for (var i=0;i<array_length_1d(rooms);i++) {
+	var _start = [rooms[i].x/_tile,rooms[i].y/_tile]
 	//var _denest = roomDimensions[0,i]
 	var _width = roomDimensions[i,0]
 	var _height = roomDimensions[i,1]
@@ -92,8 +92,8 @@ for (var xx = 0;xx<room_width div _tile;xx++) {
 }
 
 //Tiles the rooms edges
-for (var i=0;i<array_length_1d(markers);i++) {
-	var _start = [markers[i].x/_tile,markers[i].y/_tile]
+for (var i=0;i<array_length_1d(rooms);i++) {
+	var _start = [rooms[i].x/_tile,rooms[i].y/_tile]
 	//var _denest = roomDimensions[0,i]
 	var _width = roomDimensions[i,0]
 	var _height = roomDimensions[i,1]
