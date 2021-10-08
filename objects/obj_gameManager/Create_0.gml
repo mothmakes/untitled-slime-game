@@ -19,10 +19,6 @@ max_h = 12;
 
 #endregion
 
-#region Objects
-//instance_create_layer(0,0,"Managers",obj_generatorManager);
-#endregion
-
 #region Generator
 
 #region Initialize generator
@@ -148,7 +144,7 @@ treed = true;
 startRoom = rooms[scr_findCentreNode()];
 show_debug_message(startRoom)
 
-endRoom = scr_parseTree(tree,5,startRoom)
+endRoom = scr_parseTree(tree,9,startRoom)
 show_debug_message(endRoom)
 
 // Dangerous regions
@@ -179,4 +175,8 @@ for (var i = 0;i<array_length_1d(rooms);i++) {
 
 //with obj_gameManager enemies = obj_generatorManager.enemies;
 
+#endregion
+
+#region Objects
+//instance_create_layer(0,0,"Managers",obj_generatorManager);
 #endregion

@@ -1,12 +1,4 @@
-///@arg0 tree
-///@arg1 maxDistanceFromStart
-///@arg2 startNode
-function scr_parseTree() {
-
-	var _tree = argument[0];
-	var _maxDistance = argument[1];
-	var _nextNode = argument[2];
-
+function scr_parseTree(_tree,_maxDistance,_nextNode) {
 	for (var i = 0;i<_maxDistance;i++) {
 		//var _denest = _tree[0,i];
 		if _nextNode = _tree[i,0] {
@@ -15,7 +7,4 @@ function scr_parseTree() {
 	}
 
 	return _nextNode;
-	
-
-
 }
