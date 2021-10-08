@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"spr_skeleton","path":"sprites/spr_skeleton/spr_skeleton.yy",},"order":5,},
     {"id":{"name":"sprite0","path":"sprites/sprite0/sprite0.yy",},"order":0,},
     {"id":{"name":"sprite1","path":"sprites/sprite1/sprite1.yy",},"order":1,},
     {"id":{"name":"sprite2","path":"sprites/sprite2/sprite2.yy",},"order":2,},
