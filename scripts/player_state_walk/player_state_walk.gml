@@ -33,4 +33,12 @@ function player_state_walk(){
 	#endregion
 	
 	if(hsp == 0 && vsp == 0) state_switch("Idle");
+	
+	// to set the animations if the player is moving
+	if(hsp != 0) {
+		if(key_right) image_index = 0;
+		
+		if(key_left) image_index = 2;
+	}
+	
 }
