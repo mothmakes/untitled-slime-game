@@ -4,9 +4,19 @@ CollisionMap = noone;
 #endregion
 
 #region Views
-view_enabled = true;
-view_visible[0] = true;
-view_camera[0] = camera_create_view(0, 0, 640, 360, 0, noone, -1, -1, -1, -1);
+
+scr_viewSetup();
+
+#endregion
+
+#region Variables
+global.tile_size = 16;
+room_count = 10;
+min_w = 6;
+min_h = 6;
+max_w = 12;
+max_h = 12;
+
 #endregion
 
 #region Objects
@@ -16,7 +26,6 @@ view_camera[0] = camera_create_view(0, 0, 640, 360, 0, noone, -1, -1, -1, -1);
 #region Generator
 
 #region Initialize generator
-global.tile_size = 16;
 
 //Ensure seed is random
 randomize();

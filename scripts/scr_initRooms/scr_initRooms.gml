@@ -1,12 +1,5 @@
 function scr_initRooms() {
-	room_count = 10;
 	radius = 320;
-
-	max_width = 12;
-	min_width = 6;
-
-	max_height = 12;
-	min_height = 6;
 
 	translate_width = room_width/2;
 	translate_height = room_height/2;
@@ -25,8 +18,8 @@ function scr_initRooms() {
 		var _point = _roomPositions[i];
 	
 		//Gets a random size
-		var _height = irandom_range(min_height,max_height);
-		var _width = irandom_range(min_width,max_width);
+		var _height = irandom_range(min_h,max_h);
+		var _width = irandom_range(min_w,max_w);
 	
 		_roomDimensions[i] = [_width,_height];
 	
