@@ -1,6 +1,7 @@
 /// @description Trigger takeover mechanic
 sdm("Takeover success!");
 takeover_enabled = false;
+takeover_target = noone;
 alarm[0] = room_speed * takeover_cooldown;
 
 var _newObj = enemyToInhabit.object_index;

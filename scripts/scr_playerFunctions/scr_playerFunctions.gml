@@ -4,37 +4,26 @@ function scr_playerFunctions(){
 
 }
 
-function getPlayerDirection() {
-	switch(floor(image_index)) {
-		case 0:
-			return DIRS.DOWN;
-		case 1:
-			return DIRS.LEFT;
-		case 2:
-			return DIRS.DOWN;
-		case 3:
-			return DIRS.RIGHT;
-		case 4:
-			return DIRS.UP;
-		default:
-			return DIRS.DOWN;
-			
-	}
-}
-
 // To be called within player states
 function attemptTakeover() {
 	if(key_takeover && takeover_enabled) {
 		var _enemy = getEnemyWithinRange(x,y,takeover_range*global.tile_size);
 		if(_enemy != noone) {
+			if(takeover_target != _enemy) {
+				takeover_target = _enemy;
+				takeover_percent = 0;
+				return;
+			}
 			takeover_percent = lerp(takeover_percent,1,takeover_speed);
 			//sdm(takeover_percent);
 			if(takeover_percent > 0.98) {
 				enemyToInhabit = _enemy;
 				event_perform(ev_other,ev_user0);
 			}
-		}
+			
+		} else takeover_target = noone;
 	} else if(!key_takeover && takeover_enabled) {
+		takeover_target = noone;
 		takeover_percent = lerp(takeover_percent,0,takeover_loss_speed);
 		//sdm(takeover_percent);
 	}
