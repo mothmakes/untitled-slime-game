@@ -15,7 +15,6 @@ function player_state_walk(){
 	var bbox_height = bbox_bottom-bbox_top;
 	var num_checks_height = ceil(bbox_height/global.tile_size) + 1;
 	var check_div_height = bbox_height/num_checks_height;
-	sdm("check_div_height: " + string(check_div_height));
 	
 	var bbox_width = bbox_right-bbox_left;
 	var num_checks_width = ceil(bbox_width/global.tile_size) + 1;
@@ -34,7 +33,6 @@ function player_state_walk(){
 	if(collide_y) {
 		if (hsp > 0) x = (ceil(bbox_side/_tile)*_tile)-bbox_width-1;
 		else x = ceil(bbox_side/_tile)*_tile//+1;
-		sdm(x)
 		//if (hsp > 0) x = x - (x mod _tile) + (bbox_right-bbox_left) - (bbox_right-x);
 		//else x = x - (x mod _tile) - (bbox_left-x);
 		hsp = 0;
@@ -61,18 +59,20 @@ function player_state_walk(){
 	
 	#endregion
 	
+	if(mouse_left_pressed) state_switch("Attack");
 	if(hsp == 0 && vsp == 0) state_switch("Idle");
+	
 	
 	// to set the animations if the player is moving
 	if(hsp != 0) {
-		if(key_right) image_index = 2;
+		if(key_right) image_index = 3;
 		
-		if(key_left) image_index = 0;
+		if(key_left) image_index = 1;
 	}
 	if(vsp != 0) {
-		if(key_up) image_index = 3;
+		if(key_up) image_index = 4;
 		
-		if(key_down) image_index = 4;
+		if(key_down) image_index = 2;
 	
 	}
 	

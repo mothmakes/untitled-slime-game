@@ -4,6 +4,24 @@ function scr_playerFunctions(){
 
 }
 
+function getPlayerDirection() {
+	switch(floor(image_index)) {
+		case 0:
+			return DIRS.DOWN;
+		case 1:
+			return DIRS.LEFT;
+		case 2:
+			return DIRS.DOWN;
+		case 3:
+			return DIRS.RIGHT;
+		case 4:
+			return DIRS.UP;
+		default:
+			return DIRS.DOWN;
+			
+	}
+}
+
 // To be called within player states
 function attemptTakeover() {
 	if(key_takeover && takeover_enabled) {
