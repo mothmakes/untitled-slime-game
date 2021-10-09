@@ -29,7 +29,8 @@ if distance_to_object(obj_player)<= tilemap_get_width(enemy_Current_Tilemap_Id1)
 */
 
 if(hp <= 0) {
-	instance_destroy(id);	
+	state_switch("Dead");
+	
 }
 
 // to call the current state's script

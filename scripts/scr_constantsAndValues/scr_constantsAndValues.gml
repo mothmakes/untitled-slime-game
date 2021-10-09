@@ -31,6 +31,7 @@ function scr_constantsAndValues(){
 	#macro LEVEL_XP_COST_SCALER 1.2
 	#macro LEVEL_BASE_XP_COST 100
 	#macro TAKEOVER_THRESHOLD 0.25
+	#macro DEATH_TIME 2
 }
 
 function setupSpawnChance() {

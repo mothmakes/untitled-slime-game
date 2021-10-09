@@ -3,6 +3,10 @@
 
 if(image_index == image_number - 1) {
 	if(instance_exists(parent)) parent.attacking = false;
+	instance_destroy(id);
+}
+
+if(image_index == 0) {
 	if(parent.object_index == obj_player) {
 		var _num = instance_place_list(x, y, obj_enemy, enemyList, false);
 		if(_num>0) {
@@ -18,7 +22,6 @@ if(image_index == image_number - 1) {
 			sdm("hit player!");
 		}
 	}
-	instance_destroy(id);
 }
 
 draw_self();

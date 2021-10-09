@@ -4,5 +4,5 @@
 image_alpha = alpha
 draw_self();
 
-alpha = lerp(alpha,0,0.1);
+alpha = lerp(alpha,0,0.09);
 if(alpha < 0.05) instance_destroy(id);

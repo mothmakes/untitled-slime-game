@@ -37,6 +37,7 @@ state_machine_init();
 state_create("walk",enemy_state_walk);
 state_create("idle", enemy_state_idle);
 state_create("Attack", enemy_state_attack);
+state_create("Dead", enemy_state_dead);
 
 // Set the default state
 state_init("idle");
