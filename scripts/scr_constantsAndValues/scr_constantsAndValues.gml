@@ -11,6 +11,10 @@ function scr_constantsAndValues(){
 	#macro MAX_HP_PLAYER 3
 	#macro ATTACK_SPEED_PLAYER 1
 	#macro ATTACK_RANGE_PLAYER global.tile_size * 1
+	#macro BASE_XP_SKELETON 20
+	#macro LEVEL_MODIFIER 0.25
+	#macro LEVEL_XP_COST_SCALER 1.2
+	#macro LEVEL_BASE_XP_COST 100
 }
 
 function setupSpawnChance() {

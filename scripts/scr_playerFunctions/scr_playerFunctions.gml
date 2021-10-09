@@ -4,6 +4,13 @@ function scr_playerFunctions(){
 
 }
 
+function gainXP(_instanceToGainFrom) {
+	switch(_instanceToGainFrom.object_index) {
+		case obj_skeleton:
+			obj_persistentValuesTracker.xp += BASE_XP_SKELETON * (1 + _instanceToGainFrom.level * LEVEL_MODIFIER);
+	}
+}
+
 // To be called within player states
 function attemptTakeover() {
 	if(key_takeover && takeover_enabled) {

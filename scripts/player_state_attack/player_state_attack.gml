@@ -36,7 +36,6 @@ function player_state_attack(){
 				break;
 			case obj_skeleton:
 				var attack = instance_create_layer(x+_spriteMidW+(_xdir*ATTACK_RANGE_PLAYER),y+_spriteMidH+(_ydir*ATTACK_RANGE_PLAYER),"Instances",obj_swipe_attack);
-				
 				//Change to vary on enemy level
 				attack.image_speed *= ATTACK_SPEED_PLAYER;
 				break;
