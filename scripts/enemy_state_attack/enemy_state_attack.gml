@@ -41,6 +41,6 @@ function enemy_state_attack(){
 	if(!attacking) {
 		attack_enabled = false;
 		alarm[0] = room_speed * attack_cooldown;
-		state_switch("idle");
+		state_switch("walk");
 	}
 }

@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 if(image_index == image_number - 1) {
-	parent.attacking = false;
+	if(instance_exists(parent)) parent.attacking = false;
 	if(parent.object_index == obj_player) {
 		var _num = instance_place_list(x, y, obj_enemy, enemyList, false);
 		if(_num>0) {

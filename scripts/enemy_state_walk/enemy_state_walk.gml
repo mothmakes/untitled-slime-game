@@ -21,14 +21,16 @@ function enemy_state_walk(){
 			image_index = 1
 	}
 	
-		if (vsp	&& hsp = 0) {
-			state_switch("idle")
+	if(los && distance_to_object(obj_player) <= attack_range && attack_enabled) {
+		state_switch("Attack");
+	}
+	
+	if (vsp	&& hsp = 0) {
+		state_switch("idle")
 	}
 	
 	x += hsp;
 	y += vsp;
 	
-	if(los && distance_to_object(obj_player) <= attack_range && attack_enabled) {
-		state_switch("Attack");
-	}
+	
 }
