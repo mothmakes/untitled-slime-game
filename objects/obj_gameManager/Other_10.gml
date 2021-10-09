@@ -3,7 +3,7 @@
 var _tile = global.tile_size;
 
 //Initialise the tilemap
-Map = layer_tilemap_create("Tiles_1",0,0,tileset_basic,room_width div _tile,room_height div _tile)
+Map = layer_tilemap_create("Tiles_1",0,0,tileset_environ,room_width div _tile,room_height div _tile)
 //with obj_gameManager Map = obj_generatorManager.Map;
 CollisionMap = layer_tilemap_create("Collisions",0,0,tileset_collisions,room_width div _tile,room_height div _tile)
 //with obj_gameManager CollisionMap = obj_generatorManager.CollisionMap;
@@ -11,7 +11,7 @@ CollisionMap = layer_tilemap_create("Collisions",0,0,tileset_collisions,room_wid
 //Fill the tilemap with blank tiles
 for (var i=0;i<room_width div _tile;i++) {
 	for (var j=0;j<room_height div _tile;j++) {
-		tilemap_set(Map,1,i,j)
+		tilemap_set(Map,20,i,j)
 	}
 }
 
@@ -43,26 +43,26 @@ for (var i = 0;i<array_length_1d(tree);i++) {
 	//Checks if increasing or decreasing (for loop derps)
 	if _x_diff == 1 {
 		for (var _xx=(_start.xx div _tile);_xx<(_dest.xx div _tile);_xx+=_x_diff) {
-			tilemap_set(Map,3,_xx,(_x_y.yy div _tile))
-			tilemap_set(Map,3,_xx,(_x_y.yy div _tile)+_y_diff)
+			tilemap_set(Map,25,_xx,(_x_y.yy div _tile))
+			tilemap_set(Map,25,_xx,(_x_y.yy div _tile)+_y_diff)
 		}
 	} else {
 		for (var _xx=(_start.xx div _tile);_xx>(_dest.xx div _tile);_xx+=_x_diff) {
-			tilemap_set(Map,3,_xx,(_x_y.yy div _tile))
-			tilemap_set(Map,3,_xx,(_x_y.yy div _tile)+_y_diff)
+			tilemap_set(Map,25,_xx,(_x_y.yy div _tile))
+			tilemap_set(Map,25,_xx,(_x_y.yy div _tile)+_y_diff)
 		}
 	}
 	
 	//Checks if increasing or decreasing (for loop derps)
 	if _y_diff == 1 {
 		for (var _yy=(_start.yy div _tile);_yy<(_dest.yy div _tile);_yy+=_y_diff) {
-			tilemap_set(Map,3,(_y_x.xx div _tile),_yy)
-			tilemap_set(Map,3,(_y_x.xx div _tile)+_x_diff,_yy)
+			tilemap_set(Map,25,(_y_x.xx div _tile),_yy)
+			tilemap_set(Map,25,(_y_x.xx div _tile)+_x_diff,_yy)
 		}
 	} else {
 		for (var _yy=(_start.yy div _tile);_yy>(_dest.yy div _tile);_yy+=_y_diff) {
-			tilemap_set(Map,3,(_y_x.xx div _tile),_yy)
-			tilemap_set(Map,3,(_y_x.xx div _tile)+_x_diff,_yy)
+			tilemap_set(Map,25,(_y_x.xx div _tile),_yy)
+			tilemap_set(Map,25,(_y_x.xx div _tile)+_x_diff,_yy)
 		}
 	}
 	
@@ -76,7 +76,7 @@ for (var i=0;i<array_length_1d(rooms);i++) {
 	var _height = roomDimensions[i,1]
 	for (var xx=0;xx<_width;xx++) {
 		for (var yy=0;yy<_height;yy++) {
-			tilemap_set(Map,2,_start[0]+xx,_start[1]+yy)
+			tilemap_set(Map,23,_start[0]+xx,_start[1]+yy)
 		}
 	}
 }
@@ -100,38 +100,38 @@ for (var i=0;i<array_length_1d(rooms);i++) {
 	for (var xx=0;xx<_width;xx++) {
 		for (var yy=0;yy<_height;yy++) {
 			if xx == 0 {
-				if (tilemap_get(Map,_start[0]+xx-1,_start[1]+yy) != 3) tilemap_set(Map,4,_start[0]+xx-1,_start[1]+yy);
+				if (tilemap_get(Map,_start[0]+xx-1,_start[1]+yy) != 25) tilemap_set(Map,11,_start[0]+xx-1,_start[1]+yy);
 			} 
 			if xx == _width-1 {
-				var _mirroredEdge = tile_set_mirror(4,true);
-				if (tilemap_get(Map,_start[0]+xx+1,_start[1]+yy) != 3) tilemap_set(Map,_mirroredEdge,_start[0]+xx+1,_start[1]+yy);
+				//var _mirroredEdge = tile_set_mirror(4,true);
+				if (tilemap_get(Map,_start[0]+xx+1,_start[1]+yy) != 25) tilemap_set(Map,10,_start[0]+xx+1,_start[1]+yy);
 			} 
 			if yy == 0 {
-				var _rotatedEdge = tile_set_rotate(4,true);
-				if (tilemap_get(Map,_start[0]+xx,_start[1]+yy-1) != 3) tilemap_set(Map,_rotatedEdge,_start[0]+xx,_start[1]+yy-1);
+				//var _rotatedEdge = tile_set_rotate(4,true);
+				if (tilemap_get(Map,_start[0]+xx,_start[1]+yy-1) != 25) tilemap_set(Map,8,_start[0]+xx,_start[1]+yy-1);
 			} 
 			if yy == _height-1 {
-				var _rotatedEdge = tile_set_rotate(4,true);
-				var _mirroredEdge = tile_set_mirror(_rotatedEdge,true);
-				if (tilemap_get(Map,_start[0]+xx,_start[1]+yy+1) != 3) tilemap_set(Map,_mirroredEdge,_start[0]+xx,_start[1]+yy+1);
+				//var _rotatedEdge = tile_set_rotate(4,true);
+				//var _mirroredEdge = tile_set_mirror(_rotatedEdge,true);
+				if (tilemap_get(Map,_start[0]+xx,_start[1]+yy+1) != 25) tilemap_set(Map,9,_start[0]+xx,_start[1]+yy+1);
 			}
 						
 			//Corners
 			if xx = 0 and yy = 0 {
-				if (tilemap_get(Map,_start[0]+xx-1,_start[1]+yy-1) != 3) tilemap_set(Map,5,_start[0]+xx-1,_start[1]+yy-1);
+				if (tilemap_get(Map,_start[0]+xx-1,_start[1]+yy-1) != 25) tilemap_set(Map,12,_start[0]+xx-1,_start[1]+yy-1);
 			}
 			if xx = _width-1 and yy = 0 {
-				var _mirroredEdge = tile_set_mirror(5,true);
-				if (tilemap_get(Map,_start[0]+xx+1,_start[1]+yy-1) != 3) tilemap_set(Map,_mirroredEdge,_start[0]+xx+1,_start[1]+yy-1);
+				//var _mirroredEdge = tile_set_mirror(5,true);
+				if (tilemap_get(Map,_start[0]+xx+1,_start[1]+yy-1) != 25) tilemap_set(Map,15,_start[0]+xx+1,_start[1]+yy-1);
 			}
 			if xx = 0 and yy = _height-1 {
-				var _flippedEdge = tile_set_flip(5,true);
-				if (tilemap_get(Map,_start[0]+xx-1,_start[1]+yy+1) != 3) tilemap_set(Map,_flippedEdge,_start[0]+xx-1,_start[1]+yy+1);
+				//var _flippedEdge = tile_set_flip(5,true);
+				if (tilemap_get(Map,_start[0]+xx-1,_start[1]+yy+1) != 25) tilemap_set(Map,14,_start[0]+xx-1,_start[1]+yy+1);
 			}
 			if xx = _width-1 and yy = _height-1 {
-				var _rotatedEdge = tile_set_rotate(5,true);
-				var _mirroredEdge = tile_set_mirror(_rotatedEdge,true);
-				if (tilemap_get(Map,_start[0]+xx+1,_start[1]+yy+1) != 3) tilemap_set(Map,_mirroredEdge,_start[0]+xx+1,_start[1]+yy+1);
+				//var _rotatedEdge = tile_set_rotate(5,true);
+				//var _mirroredEdge = tile_set_mirror(_rotatedEdge,true);
+				if (tilemap_get(Map,_start[0]+xx+1,_start[1]+yy+1) != 25) tilemap_set(Map,13,_start[0]+xx+1,_start[1]+yy+1);
 			}
 		}
 	}
