@@ -21,5 +21,6 @@ inhabited_hp = 0;
 state_create("Idle",player_state_idle);
 state_create("Walk",player_state_walk);
 state_create("Attack",player_state_attack);
+state_create("Dead",player_state_dead);
 
 state_init("Idle");

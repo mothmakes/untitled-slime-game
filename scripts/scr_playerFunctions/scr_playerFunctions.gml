@@ -12,6 +12,11 @@ function gainXP(_instanceToGainFrom) {
 }
 
 function damageEntity(_damager,_damagee) {
+	if(_damagee.object_index == obj_player && obj_player.inhabiting != obj_player) {
+		var targetHP = _damagee.inhabited_hp - _damager.damage;
+		_damagee.inhabited_hp = targetHP;
+		return;
+	}
 	var targetHP = _damagee.hp - _damager.damage;
 	if(_damager.object_index == obj_player) {
 		if(_damagee.hp/_damagee.max_hp > TAKEOVER_THRESHOLD && targetHP <= 0) {
@@ -19,6 +24,7 @@ function damageEntity(_damager,_damagee) {
 		}
 	}
 	_damagee.hp = targetHP;
+	return;
 }
 
 // To be called within player states

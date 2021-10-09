@@ -17,4 +17,12 @@ if(place_meeting(x,y,obj_stairs)) event_perform(ev_other,ev_user1);
 
 #endregion
 
+if(inhabited_hp <= 0 && inhabiting != obj_player) {
+	event_perform(ev_other,ev_user2);	
+}
+
+if(hp<=0) {
+	state_switch("Dead");
+}
+
 state_execute();

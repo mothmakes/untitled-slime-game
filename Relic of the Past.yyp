@@ -1,6 +1,7 @@
 {
   "resources": [
     {"id":{"name":"spr_skeleton","path":"sprites/spr_skeleton/spr_skeleton.yy",},"order":5,},
+    {"id":{"name":"player_state_dead","path":"scripts/player_state_dead/player_state_dead.yy",},"order":3,},
     {"id":{"name":"sou_notakeover","path":"sounds/sou_notakeover/sou_notakeover.yy",},"order":0,},
     {"id":{"name":"spr_tileset_basic","path":"sprites/spr_tileset_basic/spr_tileset_basic.yy",},"order":1,},
     {"id":{"name":"obj_skeleton","path":"objects/obj_skeleton/obj_skeleton.yy",},"order":8,},
@@ -11,6 +12,7 @@
     {"id":{"name":"obj_notakeover","path":"objects/obj_notakeover/obj_notakeover.yy",},"order":13,},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},"order":3,},
     {"id":{"name":"font_subtitle","path":"fonts/font_subtitle/font_subtitle.yy",},"order":1,},
+    {"id":{"name":"room_gameOver","path":"rooms/room_gameOver/room_gameOver.yy",},"order":2,},
     {"id":{"name":"sprite4","path":"sprites/sprite4/sprite4.yy",},"order":4,},
     {"id":{"name":"tileset_basic","path":"tilesets/tileset_basic/tileset_basic.yy",},"order":0,},
     {"id":{"name":"tileset_collisions","path":"tilesets/tileset_collisions/tileset_collisions.yy",},"order":1,},
@@ -75,6 +77,7 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"room_titlescreen","path":"rooms/room_titlescreen/room_titlescreen.yy",},},
     {"roomId":{"name":"room0","path":"rooms/room0/room0.yy",},},
+    {"roomId":{"name":"room_gameOver","path":"rooms/room_gameOver/room_gameOver.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":0,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},

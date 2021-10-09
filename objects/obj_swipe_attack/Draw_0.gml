@@ -20,6 +20,7 @@ if(image_index == 0) {
 		if(place_meeting(x,y,obj_player)) {
 			//damage players
 			sdm("hit player!");
+			damageEntity(parent,obj_player.id);
 		}
 	}
 }
