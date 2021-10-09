@@ -2,10 +2,10 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_constantsAndValues(){
 	enum DIRS {
-		UP = 90,
-		DOWN = 270,
-		LEFT = 180,
-		RIGHT = 0
+		UP = 0,
+		DOWN = 180,
+		LEFT = 90,
+		RIGHT = 270
 	}
 	#macro NON_COLLIDE_TILE_INDEX_START 23
 	#macro MAX_HP_PLAYER 3
