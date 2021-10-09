@@ -24,7 +24,7 @@ max_h = 12;
 #region Initialize generator
 
 //Ensure seed is random
-randomize();
+//randomize();
 
 //Create the rooms and return an array containing info
 roomInfo = scr_initRooms();
@@ -52,8 +52,13 @@ endRoom = noone;
 var _number = instance_number(obj_room);
 
 //Determines length of simulation based on number of rooms
-repeat (power(2.7156,sqrt(room_count)) * 7) { 
-	
+var _seperated = false;
+var _seperationMaxDistance = 0.01;
+var iters = 0;
+//repeat (power(2.7156,sqrt(room_count)) * 7) { 
+while(!_seperated) {
+	_seperated = true;
+	iters++;
 	//Loops through each room
 	for(var i = 0;i < _number;i++) {
 		var _agent = instance_find(obj_room,i);
@@ -61,6 +66,11 @@ repeat (power(2.7156,sqrt(room_count)) * 7) {
 		//Performs seperation steering algorithm to determine a vector to add to the current
 		//position
 		var _seperation = scr_computeSeperation(_agent,_number);
+		if(abs(_seperation[0]) <= _seperationMaxDistance && abs(_seperation[1]) <= _seperationMaxDistance) {
+			_seperated = _seperated && true;
+		} else {
+			_seperated = _seperated && false;
+		}
 	
 		with _agent {
 			//Adds seperation vector
@@ -69,6 +79,7 @@ repeat (power(2.7156,sqrt(room_count)) * 7) {
 		}
 	}
 }
+sdm(iters);
 
 // Ensures all rooms are snapped to grid. Better results than rounding each move (stops overlap)
 for(var i = 0;i < _number;i++) {
