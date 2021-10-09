@@ -10,4 +10,10 @@ mouse_left_pressed = mouse_check_button_pressed(mb_left);
 
 #endregion
 
+#region Stair checking
+
+if(place_meeting(x,y,obj_stairs)) event_perform(ev_other,ev_user1);
+
+#endregion
+
 state_execute();

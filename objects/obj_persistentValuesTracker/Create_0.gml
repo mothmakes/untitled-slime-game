@@ -1,0 +1,1 @@
+playerScore = 0;

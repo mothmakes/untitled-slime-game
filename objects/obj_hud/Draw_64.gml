@@ -18,3 +18,7 @@ for(var i = 0; i < MAX_HP_PLAYER/2; ++i)
 	spriteIndex = obj_player.inhabited_hp >= (i+1)*2 ? 0 : (obj_player.inhabited_hp == (i+1)*2-1 ? 1 : 2);
 	draw_sprite_ext(spr_inhabit_hearts, spriteIndex, 24 + i*64, 32, 4, 4, 0, -1, 1);
 }
+
+draw_set_font(font_title);
+draw_set_halign(fa_right);
+draw_text(display_get_gui_width(),20,"Score: " + string(obj_persistentValuesTracker.playerScore));
