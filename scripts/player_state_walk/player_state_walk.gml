@@ -36,9 +36,15 @@ function player_state_walk(){
 	
 	// to set the animations if the player is moving
 	if(hsp != 0) {
-		if(key_right) image_index = 0;
+		if(key_right) image_index = 2;
 		
-		if(key_left) image_index = 2;
+		if(key_left) image_index = 0;
+	}
+	if(vsp != 0) {
+		if(key_up) image_index = 3;
+		
+		if(key_down) image_index = 4;
+	
 	}
 	
 }
