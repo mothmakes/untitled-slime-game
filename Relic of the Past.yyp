@@ -22,6 +22,7 @@
     {"id":{"name":"scr_getLOSPoints","path":"scripts/scr_getLOSPoints/scr_getLOSPoints.yy",},"order":11,},
     {"id":{"name":"scr_computeSeperation","path":"scripts/scr_computeSeperation/scr_computeSeperation.yy",},"order":3,},
     {"id":{"name":"scr_playerFunctions","path":"scripts/scr_playerFunctions/scr_playerFunctions.yy",},"order":17,},
+    {"id":{"name":"enemy_state_walk","path":"scripts/enemy_state_walk/enemy_state_walk.yy",},"order":0,},
     {"id":{"name":"scr_distance_to_point","path":"scripts/scr_distance_to_point/scr_distance_to_point.yy",},"order":4,},
     {"id":{"name":"player_state_idle","path":"scripts/player_state_idle/player_state_idle.yy",},"order":0,},
     {"id":{"name":"scr_minimumSpanningTree","path":"scripts/scr_minimumSpanningTree/scr_minimumSpanningTree.yy",},"order":5,},
@@ -42,6 +43,7 @@
     {"id":{"name":"obj_gameManager","path":"objects/obj_gameManager/obj_gameManager.yy",},"order":2,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":3,},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},"order":4,},
+    {"id":{"name":"enemy_state_idle","path":"scripts/enemy_state_idle/enemy_state_idle.yy",},"order":1,},
     {"id":{"name":"room0","path":"rooms/room0/room0.yy",},"order":0,},
   ],
   "Options": [
@@ -78,6 +80,7 @@
     {"folderPath":"folders/Sequences.yy","order":1,"resourceVersion":"1.0","name":"Sequences","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Animation Curves.yy","order":2,"resourceVersion":"1.0","name":"Animation Curves","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/Player States.yy","order":6,"resourceVersion":"1.0","name":"Player States","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/Enemy States.yy","order":10,"resourceVersion":"1.0","name":"Enemy States","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
