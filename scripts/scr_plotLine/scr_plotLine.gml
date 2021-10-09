@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function plotLineLow(x0,x1,y0,y1){
+function plotLineLow(x0,y0,x1,y1){
 	///@arg0 x0
 	///@arg1 x1
 	///@arg2 y0
@@ -30,7 +30,8 @@ function plotLineLow(x0,x1,y0,y1){
 	
 	return points;
 }
-function plotLineHigh(x0,x1,y0,y1) {
+
+function plotLineHigh(x0,y0,x1,y1) {
 	var dx = x1 - x0;
     var dy = y1 - y0;
     var xi = 1;

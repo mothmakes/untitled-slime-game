@@ -8,7 +8,7 @@ function scr_detectLOS(maxRange) {
 
 	var points = [];
 	if (_length <=maxRange) {
-		if abs(_dest[1] - _start[1]) < abs(_dest[0] - _dest[0]) {
+		if abs(_dest[1] - _start[1]) < abs(_dest[0] - _start[0]) {
 	        if _start[0] > _dest[0] {
 	            points = plotLineLow(_dest[0], _dest[1], _start[0], _start[1])
 			} else {
@@ -31,10 +31,10 @@ function scr_detectLOS(maxRange) {
 			var _isTile = false;
 			var tiledata = tilemap_get_at_pixel(_tilemap,_point[0],_point[1])
 			var index = tile_get_index(tiledata);
-			instance_create_layer(_point[0],_point[1],"Instances",obj_empty);
+			//instance_create_layer(_point[0],_point[1],"Instances",obj_empty);
 			if (index == 1) {
 				_isTile = true;
-				show_debug_message("wall");
+				//show_debug_message("wall");
 				//instance_create_layer(_point[0],_point[1],"Instances",obj_empty);
 			}
 			i++;
