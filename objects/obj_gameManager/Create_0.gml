@@ -158,14 +158,12 @@ event_user(0)
 player = instance_create_layer(startRoom.xx,startRoom.yy,"Instances",obj_player)
 
 //Spawns enemies
-spawnChance = 0.75
+spawnChances = setupSpawnChance();
 enemies = [];
 
 for (var i = 0;i<array_length_1d(rooms);i++) {
 	if rooms[i] != startRoom {
-		if random(1) <= spawnChance {
-			spawn_enemies(i,obj_skeleton);
-		}
+		spawn_enemies(i,obj_skeleton,irandom(4));
 	}
 }
 
