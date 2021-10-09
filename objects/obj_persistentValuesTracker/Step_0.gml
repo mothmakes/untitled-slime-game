@@ -4,5 +4,6 @@
 nextLevelThreshold = LEVEL_BASE_XP_COST * (power(LEVEL_XP_COST_SCALER,playerLevel));
 if(xp >= nextLevelThreshold) {
 	playerLevel++;
+	gainedLevels++;
 	xp = xp - nextLevelThreshold;
 }

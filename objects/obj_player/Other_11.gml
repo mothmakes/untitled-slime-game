@@ -1,2 +1,2 @@
 /// @description Trigger end level
-room_restart();
+room_goto_next();

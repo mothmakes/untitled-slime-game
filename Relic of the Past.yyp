@@ -42,6 +42,8 @@
     {"id":{"name":"scr_entityManagement","path":"scripts/scr_entityManagement/scr_entityManagement.yy",},"order":15,},
     {"id":{"name":"scr_findCentreNode","path":"scripts/scr_findCentreNode/scr_findCentreNode.yy",},"order":7,},
     {"id":{"name":"obj_titlescreen","path":"objects/obj_titlescreen/obj_titlescreen.yy",},"order":7,},
+    {"id":{"name":"obj_leveluphud","path":"objects/obj_leveluphud/obj_leveluphud.yy",},"order":14,},
+    {"id":{"name":"room_betweenlevel","path":"rooms/room_betweenlevel/room_betweenlevel.yy",},"order":3,},
     {"id":{"name":"scr_parseTree","path":"scripts/scr_parseTree/scr_parseTree.yy",},"order":8,},
     {"id":{"name":"scr_detectLOS","path":"scripts/scr_detectLOS/scr_detectLOS.yy",},"order":9,},
     {"id":{"name":"obj_tutorialManager","path":"objects/obj_tutorialManager/obj_tutorialManager.yy",},"order":13,},
@@ -80,8 +82,9 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"room_titlescreen","path":"rooms/room_titlescreen/room_titlescreen.yy",},},
     {"roomId":{"name":"room0","path":"rooms/room0/room0.yy",},},
-    {"roomId":{"name":"room_gameOver","path":"rooms/room_gameOver/room_gameOver.yy",},},
+    {"roomId":{"name":"room_betweenlevel","path":"rooms/room_betweenlevel/room_betweenlevel.yy",},},
     {"roomId":{"name":"room_tutorial","path":"rooms/room_tutorial/room_tutorial.yy",},},
+    {"roomId":{"name":"room_gameOver","path":"rooms/room_gameOver/room_gameOver.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":0,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
