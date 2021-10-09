@@ -3,13 +3,15 @@ state_machine_init();
 inhabiting = obj_player;
 enemyToInhabit = noone;
 attacking = false;
+dir = DIRS.DOWN;
 
 takeover_enabled = true;
-takeover_range = 1;
+takeover_range = 3;
 takeover_percent = 0;
 takeover_speed = 0.05;
 takeover_loss_speed = 0.1;
 takeover_cooldown = 5;
+takeover_target = noone;
 
 hp = MAX_HP_PLAYER;
 inhabited_hp = 0;

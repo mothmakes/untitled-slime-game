@@ -5,7 +5,7 @@ function player_state_attack(){
 		attacking = true;
 		var _ydir = 0;
 		var _xdir = 0;
-		switch(getPlayerDirection()) {
+		switch(dir) {
 			case DIRS.UP:
 				_ydir = -1
 				_xdir = 0;
@@ -31,16 +31,18 @@ function player_state_attack(){
 		var _spriteMidH = sprite_height/2;
 		switch(inhabiting) {
 			case obj_player:
-				sdm("attacking!")
-				//sdm(_xdir);
-				//sdm(_spriteMidW + (_xdir*ATTACK_RANGE_PLAYER));
 				var attack = instance_create_layer(x+_spriteMidW+(_xdir*ATTACK_RANGE_PLAYER),y+_spriteMidH+(_ydir*ATTACK_RANGE_PLAYER),"Instances",obj_swipe_attack);
 				attack.image_speed *= ATTACK_SPEED_PLAYER;
-				attack.parent = id;
+				break;
+			case obj_skeleton:
+				var attack = instance_create_layer(x+_spriteMidW+(_xdir*ATTACK_RANGE_PLAYER),y+_spriteMidH+(_ydir*ATTACK_RANGE_PLAYER),"Instances",obj_swipe_attack);
 				
-				attack.image_angle = getPlayerDirection();
+				//Change to vary on enemy level
+				attack.image_speed *= ATTACK_SPEED_PLAYER;
 				break;
 		}
+		attack.parent = id;
+		attack.image_angle = dir;
 		
 	}
 	image_index = 0;

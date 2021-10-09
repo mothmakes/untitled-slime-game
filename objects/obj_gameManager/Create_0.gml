@@ -168,7 +168,10 @@ show_debug_message(endRoom)
 event_user(0) 
 
 //Spawns player
-player = instance_create_layer(startRoom.xx,startRoom.yy,"Instances",obj_player)
+player = instance_create_layer(startRoom.xx,startRoom.yy,"Instances",obj_player);
+
+//Spawns stairs
+stairs = instance_create_layer(endRoom.xx,endRoom.yy,"Instances",obj_stairs);
 
 //Spawns enemies
 spawnChances = setupSpawnChance();
