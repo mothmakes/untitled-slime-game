@@ -1,6 +1,7 @@
 #region Setup Variables
 Map = noone;
 CollisionMap = noone;
+scr_constantsAndValues();
 #endregion
 
 #region Views
@@ -88,6 +89,7 @@ for(var i = 0;i < _number;i++) {
 		with _agent {
 			//Snaps to tilegrid
 			x = scr_roundm(x,16);
+			sdm(x);
 			y = scr_roundm(y,16);
 			
 			//Updates room centres, rounds to grid

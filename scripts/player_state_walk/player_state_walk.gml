@@ -12,9 +12,10 @@ function player_state_walk(){
 	var _tile = global.tile_size;
 	var _tilemap = obj_gameManager.CollisionMap
 	
-	var bbox_height = bbox_top-bbox_bottom;
+	var bbox_height = bbox_bottom-bbox_top;
 	var num_checks_height = ceil(bbox_height/global.tile_size) + 1;
 	var check_div_height = bbox_height/num_checks_height;
+	sdm("check_div_height: " + string(check_div_height));
 	
 	var bbox_width = bbox_right-bbox_left;
 	var num_checks_width = ceil(bbox_width/global.tile_size) + 1;
@@ -22,15 +23,18 @@ function player_state_walk(){
 
 	//Tile Based Collisions - X
 	if (hsp > 0) bbox_side = bbox_right; else bbox_side = bbox_left;
-	var collide_y = true;
+	var collide_y = false;
 	for(var i=0;i<num_checks_height;i++) {
-		collide_y = collide_y && (tilemap_get_at_pixel(_tilemap,bbox_side+hsp,bbox_top+(check_div_height*i)) > 0);
+		collide_y = (tile_get_index(tilemap_get_at_pixel(_tilemap,bbox_side+hsp,max(bbox_top+(check_div_height*i),bbox_bottom))) > 0);
+		if(collide_y) break;
 	}
-	sdm(x)
+	//sdm("Player")
+	//sdm(x)
 	//if (tilemap_get_at_pixel(_tilemap,bbox_side+hsp,bbox_top) == 1 ) or (tilemap_get_at_pixel(_tilemap,bbox_side+hsp,bbox_bottom) == 1 ) {
 	if(collide_y) {
-		if (hsp > 0) x = (ceil(bbox_side/_tile)*_tile)-bbox_width;
-		else x = ceil(bbox_side/_tile)*_tile;
+		if (hsp > 0) x = (ceil(bbox_side/_tile)*_tile)-bbox_width-1;
+		else x = ceil(bbox_side/_tile)*_tile//+1;
+		sdm(x)
 		//if (hsp > 0) x = x - (x mod _tile) + (bbox_right-bbox_left) - (bbox_right-x);
 		//else x = x - (x mod _tile) - (bbox_left-x);
 		hsp = 0;
@@ -40,13 +44,13 @@ function player_state_walk(){
 
 	//Tile Based Collisions - Y
 	if (vsp > 0) bbox_side = bbox_bottom; else bbox_side = bbox_top;
-	var collide_x = true;
+	var collide_x = false;
 	for(var i=0;i<num_checks_width;i++) {
-		collide_x = collide_x && (tilemap_get_at_pixel(_tilemap,bbox_left+(check_div_width*i),bbox_side+vsp) > 0);
+		collide_x = (tile_get_index(tilemap_get_at_pixel(_tilemap,max(bbox_left+(check_div_width*i),bbox_right),bbox_side+vsp)) > 0);
 	}
 	//if (tilemap_get_at_pixel(_tilemap,bbox_left,bbox_side+vsp) != 0 ) or (tilemap_get_at_pixel(_tilemap,bbox_right,bbox_side+vsp) != 0 ) {
 	if(collide_x) {
-		if (vsp > 0) y = (ceil(bbox_side/_tile)*_tile)-bbox_height;
+		if (vsp > 0) y = (ceil(bbox_side/_tile)*_tile) - bbox_height - 1;
 		else y = ceil(bbox_side/_tile)*_tile;
 		//if (vsp > 0) y = y - (y mod _tile) + (bbox_bottom-bbox_top) - (bbox_bottom-y);
 		//else y = y - (y mod _tile) - (bbox_top-y);
