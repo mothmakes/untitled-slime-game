@@ -50,6 +50,7 @@
     {"id":{"name":"spr_notakeover","path":"sprites/spr_notakeover/spr_notakeover.yy",},"order":10,},
     {"id":{"name":"obj_empty","path":"objects/obj_empty/obj_empty.yy",},"order":5,},
     {"id":{"name":"scr_fsms","path":"scripts/scr_fsms/scr_fsms.yy",},"order":13,},
+    {"id":{"name":"obj_stegosaurus","path":"objects/obj_stegosaurus/obj_stegosaurus.yy",},"order":14,},
     {"id":{"name":"player_state_walk","path":"scripts/player_state_walk/player_state_walk.yy",},"order":1,},
     {"id":{"name":"Sprite6","path":"sprites/Sprite6/Sprite6.yy",},"order":14,},
     {"id":{"name":"scr_plotLine","path":"scripts/scr_plotLine/scr_plotLine.yy",},"order":10,},

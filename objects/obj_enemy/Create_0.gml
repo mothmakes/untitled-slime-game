@@ -1,5 +1,3 @@
-image_speed = 0;
-
 hp = 30;
 max_hp = 30;
 
@@ -15,8 +13,6 @@ attack_enabled = true;
 attack_range = 0;
 attack_cooldown = 0;
 attacking = false;
-attack_charging = false;
-attack_delay = 0;
 
 level = obj_persistentValuesTracker.levels[? object_index];
 

@@ -37,6 +37,12 @@ function player_state_attack(){
 				//Change to vary on enemy level
 				attack.image_speed *= ATTACK_SPEED_SKELETON;
 				break;
+			case obj_stegosaurus:
+				damage = DAMAGE_STEGO;
+				var attack = instance_create_layer(x+_spriteMidW+(_xdir*ATTACK_DISTANCE_STEGO),y+_spriteMidH+(_ydir*ATTACK_DISTANCE_STEGO),"Instances",obj_swipe_attack);
+				//Change to vary on enemy level
+				attack.image_speed *= ATTACK_SPEED_STEGO;
+				break;
 		}
 		attack.parent = id;
 		attack.image_angle = dir;

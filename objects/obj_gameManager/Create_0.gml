@@ -180,6 +180,7 @@ enemies = [];
 for (var i = 0;i<array_length_1d(rooms);i++) {
 	if rooms[i] != startRoom {
 		spawn_enemies(i,obj_skeleton,irandom(4));
+		spawn_enemies(i,obj_stegosaurus,irandom(4));
 	}
 }
 

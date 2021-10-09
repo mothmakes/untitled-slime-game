@@ -6,3 +6,4 @@ nextLevelThreshold = LEVEL_BASE_XP_COST;
 
 levels = ds_map_create();
 levels[? obj_skeleton] = 0;
+levels[? obj_stegosaurus] = 0;

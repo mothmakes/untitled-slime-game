@@ -9,6 +9,9 @@ function gainXP(_instanceToGainFrom) {
 	switch(_instanceToGainFrom.object_index) {
 		case obj_skeleton:
 			obj_persistentValuesTracker.xp += BASE_XP_SKELETON * (1 + (_instanceToGainFrom.level * LEVEL_MODIFIER));
+			
+		case obj_stegosaurus:
+			obj_persistentValuesTracker.xp += BASE_XP_STEGO * (1 + _instanceToGainFrom.level * LEVEL_MODIFIER);
 	}
 }
 
