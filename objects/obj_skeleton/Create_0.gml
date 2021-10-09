@@ -9,3 +9,4 @@ max_hp = MAX_HP_SKELETON;
 damage = DAMAGE_SKELETON;
 attack_range = ATTACK_RANGE_SKELETON;
 attack_cooldown = ATTACK_COOLDOWN_SKELETON;
+attack_delay = ATTACK_DELAY_SKELETON;

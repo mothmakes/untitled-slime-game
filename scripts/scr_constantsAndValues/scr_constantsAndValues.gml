@@ -16,6 +16,8 @@ function scr_constantsAndValues(){
 	
 	#macro ATTACK_COOLDOWN_SKELETON 2
 	
+	#macro ATTACK_DELAY_SKELETON 0.5;
+	
 	#macro DAMAGE_PLAYER 1
 	#macro DAMAGE_SKELETON 2
 	

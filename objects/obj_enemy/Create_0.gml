@@ -1,3 +1,5 @@
+image_speed = 0;
+
 hp = 30;
 max_hp = 30;
 
@@ -13,6 +15,8 @@ attack_enabled = true;
 attack_range = 0;
 attack_cooldown = 0;
 attacking = false;
+attack_charging = false;
+attack_delay = 0;
 
 los_distance = 128;
 standoff_range = STANDOFF_RANGE;

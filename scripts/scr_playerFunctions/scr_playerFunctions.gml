@@ -12,6 +12,8 @@ function gainXP(_instanceToGainFrom) {
 }
 
 function damageEntity(_damager,_damagee) {
+	_damagee.image_blend = c_red;
+	_damagee.alarm[9] = room_speed * 0.5
 	if(_damagee.object_index == obj_player && obj_player.inhabiting != obj_player) {
 		var targetHP = _damagee.inhabited_hp - _damager.damage;
 		_damagee.inhabited_hp = targetHP;

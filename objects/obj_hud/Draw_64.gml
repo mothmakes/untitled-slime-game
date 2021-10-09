@@ -12,11 +12,15 @@ for(var i = 0; i < MAX_HP_PLAYER/2; ++i)
 	spriteIndex = obj_player.hp >= (i+1)*2 ? 0 : (obj_player.hp == (i+1)*2-1 ? 1 : 2);
 	draw_sprite_ext(spr_hearts, spriteIndex, 16 + i*64, 16, 4, 4, 0, -1, 1);
 }
+var _max_hp;
+if(obj_player.inhabiting != obj_player) {
+	_max_hp = obj_player.inhabiting.max_hp;
+} else _max_hp = 0;
 
-for(var i = 0; i < MAX_HP_PLAYER/2; ++i)
+for(var i = 0; i < _max_hp/2; ++i)
 {
 	spriteIndex = obj_player.inhabited_hp >= (i+1)*2 ? 0 : (obj_player.inhabited_hp == (i+1)*2-1 ? 1 : 2);
-	draw_sprite_ext(spr_inhabit_hearts, spriteIndex, 24 + i*64, 32, 4, 4, 0, -1, 1);
+	draw_sprite_ext(spr_inhabit_hearts, spriteIndex, 32 + i*64, 40, 4, 4, 0, -1, 1);
 }
 
 draw_set_font(font_title);

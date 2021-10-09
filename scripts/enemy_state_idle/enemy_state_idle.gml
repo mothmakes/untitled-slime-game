@@ -4,6 +4,7 @@ function enemy_state_idle(){
 	image_index = 1;
 	
 	if(los && distance_to_object(obj_player) <= attack_range && attack_enabled) {
+		alarm[1] = room_speed * attack_delay;
 		state_switch("Attack");
 	}
 	
