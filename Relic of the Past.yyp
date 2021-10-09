@@ -23,6 +23,7 @@
     {"id":{"name":"scr_getLOSPoints","path":"scripts/scr_getLOSPoints/scr_getLOSPoints.yy",},"order":11,},
     {"id":{"name":"scr_computeSeperation","path":"scripts/scr_computeSeperation/scr_computeSeperation.yy",},"order":3,},
     {"id":{"name":"scr_playerFunctions","path":"scripts/scr_playerFunctions/scr_playerFunctions.yy",},"order":17,},
+    {"id":{"name":"spr_inhabit_hearts","path":"sprites/spr_inhabit_hearts/spr_inhabit_hearts.yy",},"order":8,},
     {"id":{"name":"scr_distance_to_point","path":"scripts/scr_distance_to_point/scr_distance_to_point.yy",},"order":4,},
     {"id":{"name":"obj_swipe_attack","path":"objects/obj_swipe_attack/obj_swipe_attack.yy",},"order":0,},
     {"id":{"name":"player_state_idle","path":"scripts/player_state_idle/player_state_idle.yy",},"order":0,},
