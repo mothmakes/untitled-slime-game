@@ -14,6 +14,8 @@ takeover_cooldown = 5;
 takeover_target = noone;
 
 hp = MAX_HP_PLAYER;
+max_hp = MAX_HP_PLAYER;
+damage = DAMAGE_PLAYER;
 inhabited_hp = 0;
 
 state_create("Idle",player_state_idle);

@@ -9,8 +9,29 @@ function scr_constantsAndValues(){
 	}
 	#macro NON_COLLIDE_TILE_INDEX_START 23
 	#macro MAX_HP_PLAYER 3
+	#macro MAX_HP_SKELETON 4
+	
 	#macro ATTACK_SPEED_PLAYER 1
-	#macro ATTACK_RANGE_PLAYER global.tile_size * 1
+	#macro ATTACK_SPEED_SKELETON 1
+	
+	#macro ATTACK_COOLDOWN_SKELETON 2
+	
+	#macro DAMAGE_PLAYER 1
+	#macro DAMAGE_SKELETON 2
+	
+	#macro ATTACK_DISTANCE_PLAYER global.tile_size * 1
+	#macro ATTACK_DISTANCE_SKELETON global.tile_size * 1.5
+	
+	#macro ATTACK_RANGE_SKELETON global.tile_size * 0.5
+	
+	#macro BASE_XP_SKELETON 20
+	
+	#macro STANDOFF_RANGE global.tile_size * 0.5
+	#macro LEVEL_MODIFIER 0.25
+	#macro LEVEL_XP_COST_SCALER 1.2
+	#macro LEVEL_BASE_XP_COST 100
+	#macro TAKEOVER_THRESHOLD 0.25
+	#macro DEATH_TIME 2
 }
 
 function setupSpawnChance() {
