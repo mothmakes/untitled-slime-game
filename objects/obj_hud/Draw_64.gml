@@ -28,5 +28,9 @@ draw_set_halign(fa_right);
 draw_set_colour(c_white);
 draw_text(display_get_gui_width(),20,"Score: " + string(obj_persistentValuesTracker.playerScore));
 
+draw_set_font(font_subtitle);
+draw_set_halign(fa_left);
+draw_text(10,display_get_gui_height()-80,"Level " + string(obj_persistentValuesTracker.playerLevel));
+
 var percent = (obj_persistentValuesTracker.xp/obj_persistentValuesTracker.nextLevelThreshold)*100;
 draw_healthbar(10,display_get_gui_height()-20,display_get_gui_width()-10,display_get_gui_height()-40,percent,c_black,c_red,c_green,0,true,true);

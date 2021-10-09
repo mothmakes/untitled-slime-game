@@ -5,9 +5,10 @@ function scr_playerFunctions(){
 }
 
 function gainXP(_instanceToGainFrom) {
+	sdm("xp!");
 	switch(_instanceToGainFrom.object_index) {
 		case obj_skeleton:
-			obj_persistentValuesTracker.xp += BASE_XP_SKELETON * (1 + _instanceToGainFrom.level * LEVEL_MODIFIER);
+			obj_persistentValuesTracker.xp += BASE_XP_SKELETON * (1 + (_instanceToGainFrom.level * LEVEL_MODIFIER));
 	}
 }
 

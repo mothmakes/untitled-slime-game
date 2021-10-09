@@ -657,8 +657,8 @@
   "creationCodeFile": "",
   "inheritCode": false,
   "instanceCreationOrder": [
-    {"name":"inst_F1AED58","path":"rooms/room0/room0.yy",},
     {"name":"inst_7B352FC6","path":"rooms/room0/room0.yy",},
+    {"name":"inst_F1AED58","path":"rooms/room0/room0.yy",},
     {"name":"inst_5E4FEAE8","path":"rooms/room0/room0.yy",},
   ],
   "inheritCreationOrder": false,

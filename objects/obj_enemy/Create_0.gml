@@ -18,6 +18,8 @@ attacking = false;
 attack_charging = false;
 attack_delay = 0;
 
+level = obj_persistentValuesTracker.levels[? object_index];
+
 los_distance = 128;
 standoff_range = STANDOFF_RANGE;
 
