@@ -11,15 +11,31 @@ function gainXP(_instanceToGainFrom) {
 	}
 }
 
+function damageEntity(_damager,_damagee) {
+	var targetHP = _damagee.hp - _damager.damage;
+	if(_damager.object_index == obj_player) {
+		if(_damagee.hp/_damagee.max_hp > TAKEOVER_THRESHOLD && targetHP <= 0) {
+			targetHP = 0.01;
+		}
+	}
+	_damagee.hp = targetHP;
+}
+
 // To be called within player states
 function attemptTakeover() {
 	if(key_takeover && takeover_enabled) {
-		var _enemy = getEnemyWithinRange(x,y,takeover_range*global.tile_size);
+		if(key_takeover_pressed) var _enemy = getEnemyWithinRange(x,y,takeover_range*global.tile_size);
+		else var _enemy = takeover_target;
 		if(_enemy != noone) {
 			if(takeover_target != _enemy) {
 				takeover_target = _enemy;
 				takeover_percent = 0;
 				return;
+			}
+			if(takeover_target.hp/takeover_target.max_hp>TAKEOVER_THRESHOLD) {
+				takeover_enabled = false;
+				alarm[0] = room_speed * (takeover_cooldown / 2);
+				instance_create_layer(takeover_target.x+sprite_width/2-sprite_xoffset,takeover_target.y+sprite_height/2-sprite_yoffset,"Enemies",obj_notakeover)
 			}
 			takeover_percent = lerp(takeover_percent,1,takeover_speed);
 			//sdm(takeover_percent);
