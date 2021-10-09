@@ -85,7 +85,7 @@ for (var i=0;i<array_length_1d(rooms);i++) {
 for (var xx = 0;xx<room_width div _tile;xx++) {
 	for (var yy = 0;yy<room_height div _tile;yy++) {
 		var _tileData = tilemap_get(Map,xx,yy);
-		if _tileData == 1 {
+		if tile_get_index(_tileData) < NON_COLLIDE_TILE_INDEX_START {
 			tilemap_set(CollisionMap,1,xx,yy)
 		}
 	}

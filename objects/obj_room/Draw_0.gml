@@ -3,6 +3,8 @@
 
 if obj_gameManager.startRoom == id {
 	draw_set_colour(c_purple)
+	//sdm("Room")
+	//sdm(x)
 } else if obj_gameManager.endRoom == id {
 	draw_set_colour(c_orange)
 } else {
