@@ -11,8 +11,8 @@ function spawn_enemies(_room_index,_obj,_maxAmount) {
 	for(var i=0;i<_maxAmount;i++) {
 		if(random(1) <= obj_gameManager.spawnChances[? _obj]) {
 			var _temp = instance_create_layer(0,0,"Enemies",_obj);
-			var _spawnX = obj_gameManager.rooms[_room_index].x + (_width*random(1)*global.tile_size - _obj.sprite_width);
-			var _spawnY = obj_gameManager.rooms[_room_index].y + (_height*random(1)*global.tile_size - _obj.sprite_height);
+			var _spawnX = max(obj_gameManager.rooms[_room_index].x,obj_gameManager.rooms[_room_index].x + (_width*random(1)*global.tile_size - _obj.sprite_width));
+			var _spawnY = max(obj_gameManager.rooms[_room_index].y,obj_gameManager.rooms[_room_index].y + (_height*random(1)*global.tile_size - _obj.sprite_height));
 			_temp.x = _spawnX;
 			_temp.y = _spawnY;
 			obj_gameManager.enemies[array_length(enemies)] = _temp;
