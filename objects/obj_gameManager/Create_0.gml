@@ -164,11 +164,7 @@ enemies = [];
 for (var i = 0;i<array_length_1d(rooms);i++) {
 	if rooms[i] != startRoom {
 		if random(1) <= spawnChance {
-			var _width = rooms[i].width;
-			var _height = rooms[i].height;
-			var _spawnX = rooms[i].x + ((_width-1)*random(1)*global.tile_size);
-			var _spawnY = rooms[i].y + ((_height-1)*random(1)*global.tile_size);
-			enemies[i] = instance_create_layer(_spawnX,_spawnY,"Instances",obj_enemy);
+			spawn_enemies(i,obj_skeleton);
 		}
 	}
 }
