@@ -1,4 +1,4 @@
-if(takeover_target != noone && takeover_enabled) {
+if(takeover_target != noone && takeover_enabled && instance_exists(takeover_target)) {
 	draw_circular_bar(takeover_target.x+sprite_width/2-sprite_xoffset,takeover_target.y+sprite_height/2-sprite_yoffset,takeover_percent,1,c_purple,7,0.9,2);
 }
 
