@@ -15,6 +15,9 @@ function enemy_state_walk(){
 	}
 	
 		if (vsp	&& hsp = 0) {
-			state_switch(enemy_state_idle())
+			state_switch("idle")
 	}
+	
+	x += hsp;
+	y += vsp;
 }
