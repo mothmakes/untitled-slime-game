@@ -21,4 +21,5 @@ for(var i = 0; i < MAX_HP_PLAYER/2; ++i)
 
 draw_set_font(font_title);
 draw_set_halign(fa_right);
+draw_set_colour(c_white);
 draw_text(display_get_gui_width(),20,"Score: " + string(obj_persistentValuesTracker.playerScore));
