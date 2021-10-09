@@ -4,6 +4,8 @@ function player_state_walk(){
 	hsp = (key_right-key_left) * 2;
 	vsp = (key_down-key_up) * 2;
 	
+	attemptTakeover();
+	
 	#region Collisions
 	
 	var bbox_side;

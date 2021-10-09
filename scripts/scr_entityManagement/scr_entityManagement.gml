@@ -19,3 +19,11 @@ function spawn_enemies(_room_index,_obj,_maxAmount) {
 		}
 	}
 }
+
+function getEnemyWithinRange(_startX,_startY,_range) {
+	var _nearest = instance_nearest(_startX,_startY,obj_enemy);
+	if(distance_to_object(_nearest) <= _range) {
+		return _nearest;
+	}
+	return noone;
+}
