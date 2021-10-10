@@ -27,14 +27,16 @@ if(instance_exists(parent) && parent.object_index == obj_player) {
 		}
 	}
 } else {
-	if(place_meeting(x,y,obj_player)) {
-		//damage players
-		sdm("hit player!");
-		damageEntity(parent,obj_player.id);
+	if(instance_exists(parent)) {
+		if(place_meeting(x,y,obj_player)) {
+			//damage players
+			sdm("hit player!");
+			damageEntity(parent,obj_player.id);
 			
-		// Destroy fireball after one hit.
-		if(instance_exists(parent)) parent.attacking = false;
-		instance_destroy(id);
+			// Destroy fireball after one hit.
+			if(instance_exists(parent)) parent.attacking = false;
+			instance_destroy(id);
+		}
 	}
 }
 
