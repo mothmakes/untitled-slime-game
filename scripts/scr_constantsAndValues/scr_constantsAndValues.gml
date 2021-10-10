@@ -20,7 +20,7 @@ function scr_constantsAndValues(){
 	#macro ATTACK_COOLDOWN_STEGO 4
 	
 	#macro ATTACK_DELAY_SKELETON 0.5;
-	#macro ATTACK_DELAY_STEGO 0.5;
+	#macro ATTACK_DELAY_STEGO 0.9;
 	
 	#macro DAMAGE_PLAYER 1
 	#macro DAMAGE_SKELETON 2
