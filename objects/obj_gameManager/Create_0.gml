@@ -25,7 +25,7 @@ max_h = 12;
 #region Initialize generator
 
 //Ensure seed is random
-//randomize();
+randomize();
 
 //Create the rooms and return an array containing info
 roomInfo = scr_initRooms();

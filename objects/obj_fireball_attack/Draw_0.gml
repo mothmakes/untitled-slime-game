@@ -8,8 +8,9 @@ else vsp = ATTACK_SPEED_STEGO;
 
 timer = current_time;
 
-if(current_time - startTime > 750) {
+if(current_time - startTime > FIREBALL_STUN_DURATION) {
 	if(instance_exists(parent)) parent.attacking = false;
+} else if (current_time - startTime > FIREBALL_ATTACK_DURATION) {
 	instance_destroy(id);
 }
 

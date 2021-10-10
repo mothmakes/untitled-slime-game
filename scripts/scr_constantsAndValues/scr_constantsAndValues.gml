@@ -36,6 +36,9 @@ function scr_constantsAndValues(){
 	#macro BASE_XP_SKELETON 20
 	#macro BASE_XP_STEGO 50
 	
+	#macro FIREBALL_STUN_DURATION 450
+	#macro FIREBALL_ATTACK_DURATION FIREBALL_STUN_DURATION + 200
+	
 	#macro STANDOFF_RANGE global.tile_size * 0.5
 	#macro LEVEL_MODIFIER 0.25
 	#macro LEVEL_XP_COST_SCALER 1.2

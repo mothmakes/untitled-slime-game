@@ -40,4 +40,13 @@ if(obj_persistentValuesTracker.target != noone && room == room0) {
 	draw_set_halign(fa_right);
 	draw_text(display_get_gui_width()-20,gui_h*0.13,"Target:");
 	draw_sprite_ext(obj_persistentValuesTracker.target.sprite_index,0,gui_w*0.93,gui_h*0.2,4,4,0,c_white,1);
+	draw_text(display_get_gui_width()-20,gui_h*0.26,"Targets\n left: " + string(instance_number(obj_persistentValuesTracker.target)-1));
+}
+
+if(room == room0) {
+	if(instance_number(obj_persistentValuesTracker.target) == 1 && obj_persistentValuesTracker.target != obj_player.inhabiting) {
+		draw_set_halign(fa_middle);
+		draw_text(gui_w*0.5,gui_h*0.4,"No targets left! Restart?");
+		draw_text(gui_w*0.5,gui_h*0.88,"Restart");
+	}
 }
