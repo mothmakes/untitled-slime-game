@@ -28,7 +28,7 @@ function scr_constantsAndValues(){
 	
 	#macro ATTACK_DISTANCE_PLAYER global.tile_size * 1
 	#macro ATTACK_DISTANCE_SKELETON global.tile_size * 1.5
-	#macro ATTACK_DISTANCE_STEGO global.tile_size * 1.5
+	#macro ATTACK_DISTANCE_STEGO global.tile_size * 1
 	
 	#macro ATTACK_RANGE_SKELETON global.tile_size * 0.5
 	#macro ATTACK_RANGE_STEGO global.tile_size * 0.5
