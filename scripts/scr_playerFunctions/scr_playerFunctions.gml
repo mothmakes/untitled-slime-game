@@ -11,11 +11,12 @@ function gainXP(_instanceToGainFrom) {
 			var xpGain = BASE_XP_SKELETON * (1 + (_instanceToGainFrom.level * LEVEL_MODIFIER));
 			obj_persistentValuesTracker.xp += xpGain;
 			obj_persistentValuesTracker.playerScore += xpGain;
-			
+			break;
 		case obj_stegosaurus:
 			var xpGain = BASE_XP_STEGO * (1 + _instanceToGainFrom.level * LEVEL_MODIFIER);
 			obj_persistentValuesTracker.xp += xpGain;
 			obj_persistentValuesTracker.playerScore += xpGain;
+			break;
 	}
 }
 
