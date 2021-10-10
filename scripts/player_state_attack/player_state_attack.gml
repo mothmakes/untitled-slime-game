@@ -30,24 +30,27 @@ function player_state_attack(){
 				damage = DAMAGE_PLAYER;
 				var attack = instance_create_layer(x+_spriteMidW+(_xdir*ATTACK_DISTANCE_PLAYER),y+_spriteMidH+(_ydir*ATTACK_DISTANCE_PLAYER),"Instances",obj_swipe_attack);
 				attack.image_speed *= ATTACK_SPEED_PLAYER;
+				attack.image_angle = dir;
+				image_index = 0;
 				break;
 			case obj_skeleton:
 				damage = DAMAGE_SKELETON;
 				var attack = instance_create_layer(x+_spriteMidW+(_xdir*ATTACK_DISTANCE_SKELETON),y+_spriteMidH+(_ydir*ATTACK_DISTANCE_SKELETON),"Instances",obj_swipe_attack);
 				//Change to vary on enemy level
 				attack.image_speed *= ATTACK_SPEED_SKELETON;
+				attack.image_angle = dir;
+				image_index = 0;
 				break;
 			case obj_stegosaurus:
 				damage = DAMAGE_STEGO;
 				var attack = instance_create_layer(x+_spriteMidW+(_xdir*ATTACK_DISTANCE_STEGO),y+_spriteMidH+(_ydir*ATTACK_DISTANCE_STEGO),"Instances",obj_fireball_attack);
 				//Change to vary on enemy level
 				attack.image_speed *= ATTACK_SPEED_STEGO;
+				attack.dir = dir;
 				break;
 		}
 		attack.parent = id;
-		attack.image_angle = dir;
 		
 	}
-	image_index = 0;
 	if(!attacking) state_switch("Idle");
 }
