@@ -9,14 +9,14 @@ if(image_index == 0) {
 			//damage enemies
 			for(var i=0;i<_num;i++) {
 				//sdm("hit enemies!");
-				damageEntity(parent,enemyList[| i]);
+				if(instance_exists(enemyList[| i])) damageEntity(parent,enemyList[| i]);
 			}
 		}
 	} else if (instance_exists(parent)) {
 		if(place_meeting(x,y,obj_player)) {
 			//damage players
 			//sdm("hit player!");
-			damageEntity(parent,obj_player.id);
+			if(object_exists(obj_player)) damageEntity(parent,obj_player.id);
 		}
 	}
 }

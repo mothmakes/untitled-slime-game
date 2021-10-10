@@ -19,7 +19,7 @@ if(instance_exists(parent) && parent.object_index == obj_player) {
 		//damage enemies
 		for(var i=0;i<_num;i++) {
 			sdm("hit enemies!");
-			damageEntity(parent,enemyList[| i]);
+			if(instance_exists(enemyList[| i])) damageEntity(parent,enemyList[| i]);
 			
 			// Destroy fireball after one hit.
 			if(instance_exists(parent)) parent.attacking = false;
@@ -31,7 +31,7 @@ if(instance_exists(parent) && parent.object_index == obj_player) {
 		if(place_meeting(x,y,obj_player)) {
 			//damage players
 			sdm("hit player!");
-			damageEntity(parent,obj_player.id);
+			if(object_exists(obj_player))damageEntity(parent,obj_player.id);
 			
 			// Destroy fireball after one hit.
 			if(instance_exists(parent)) parent.attacking = false;
