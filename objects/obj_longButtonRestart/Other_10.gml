@@ -11,6 +11,7 @@ with(obj_persistentValuesTracker) {
 	gainedLevels = 0;
 	floorsTraversed = 0;
 	nextLevelThreshold = LEVEL_BASE_XP_COST;
+	currentPlayerInhabit = noone;
 
 	levels[? obj_skeleton] = 0;
 	levels[? obj_stegosaurus] = 0;

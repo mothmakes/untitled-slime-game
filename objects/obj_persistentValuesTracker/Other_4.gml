@@ -3,6 +3,8 @@
 
 if(room_get_name(room) == "room0") {
 	target = targetArray[irandom(array_length(targetArray)-1)];
+	if(currentPlayerInhabit != noone) obj_player.inhabiting = currentPlayerInhabit;
+	
 	if(instance_number(target) == 1) {
 		room_goto(room0);
 	}
