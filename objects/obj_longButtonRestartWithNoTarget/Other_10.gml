@@ -21,4 +21,7 @@ with(obj_persistentValuesTracker) {
 	target = noone;
 }
 
-room_goto(room0);
+if(room == room0)
+	room_goto(room0);
+else if(room == room_tutorial)
+	room_goto(room_tutorial);

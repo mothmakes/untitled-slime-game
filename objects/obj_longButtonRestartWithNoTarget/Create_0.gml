@@ -6,3 +6,9 @@ event_inherited();
 
 sprite = spr_longButton;
 sprite_index = sprite;
+
+if(room == room_tutorial)
+{
+	image_xscale = 4;
+	image_yscale = 4;
+}
