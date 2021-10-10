@@ -17,6 +17,8 @@ y = _y;
 inhabiting = _newObj;
 sprite_index = inhabiting.sprite_index;
 inhabited_hp = inhabiting.max_hp;
+sdm(inhabiting.object_index);
+sdm(inhabited_hp);
 
 //Do not access enemy variables after this!!
 instance_destroy(enemyToInhabit);
