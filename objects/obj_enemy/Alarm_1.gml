@@ -32,7 +32,7 @@ switch(object_index) {
 		break;
 	case obj_stegosaurus:
 		damage = DAMAGE_STEGO;
-		var attack = instance_create_layer(x+_spriteMidW+(_xdir*ATTACK_DISTANCE_STEGO),y+_spriteMidH+(_ydir*ATTACK_DISTANCE_STEGO),"Enemies",obj_swipe_attack);
+		var attack = instance_create_layer(x+_spriteMidW+(_xdir*ATTACK_DISTANCE_STEGO),y+_spriteMidH+(_ydir*ATTACK_DISTANCE_STEGO),"Enemies",obj_fireball_attack);
 		//Change to vary on enemy level
 		attack.image_speed *= ATTACK_SPEED_STEGO;
 		break;
