@@ -13,7 +13,7 @@ if(current_time - startTime > 750) {
 	instance_destroy(id);
 }
 
-if(parent.object_index == obj_player) {
+if(instance_exists(parent) && parent.object_index == obj_player) {
 	var _num = instance_place_list(x, y, obj_enemy, enemyList, false);
 	if(_num>0) {
 		//damage enemies
