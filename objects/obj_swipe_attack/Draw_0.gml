@@ -3,7 +3,7 @@
 
 
 if(image_index == 0) {
-	if(parent.object_index == obj_player) {
+	if(instance_exists(parent) && parent.object_index == obj_player) {
 		var _num = instance_place_list(x, y, obj_enemy, enemyList, false);
 		if(_num>0) {
 			//damage enemies
@@ -12,7 +12,7 @@ if(image_index == 0) {
 				damageEntity(parent,enemyList[| i]);
 			}
 		}
-	} else {
+	} else if (instance_exists(parent)) {
 		if(place_meeting(x,y,obj_player)) {
 			//damage players
 			//sdm("hit player!");
