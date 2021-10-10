@@ -10,5 +10,5 @@ if(room_get_name(room) == "room_betweenlevel") {
 }
 
 if(room_get_name(room) == "room0") {
-	floorsTraversed++;
+	
 }
