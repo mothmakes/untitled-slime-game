@@ -3,6 +3,6 @@
 function player_state_dead(){
 	image_blend = c_dkgrey;
 	if(state_timer > room_speed * DEATH_TIME) {
-		room_goto(room_last);
+		room_goto(room_gameOver);
 	}
 }
