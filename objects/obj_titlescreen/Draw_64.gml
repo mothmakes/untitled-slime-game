@@ -8,3 +8,6 @@ draw_text(room_width/2,room_height*0.5,"WASD to move, LMB to attack, E to takeov
 
 draw_set_font(font_subtitle);
 draw_text(room_width/2,room_height*0.7,"Press Enter to play");
+
+draw_set_font(font_subtitle);
+draw_text(room_width/2,room_height*0.8,"Press Escape to skip tutorial");
