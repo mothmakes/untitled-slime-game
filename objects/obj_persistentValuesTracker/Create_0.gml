@@ -4,6 +4,7 @@ playerLevel = 0;
 gainedLevels = 0;
 floorsTraversed = 0;
 nextLevelThreshold = LEVEL_BASE_XP_COST;
+currentPlayerInhabit = noone;
 
 levels = ds_map_create();
 levels[? obj_skeleton] = 0;
