@@ -1,9 +1,19 @@
 /// @description Trigger end level
 
-if(inhabiting == obj_persistentValuesTracker.target) {
-	obj_persistentValuesTracker.floorsTraversed++;
-	room_goto_next();
-} else {
-	noTargetErrorAlpha = 1;
-	audio_play_sound(sou_notargeterror,9,false);
+if(room == room_tutorial)
+{
+	if(inhabiting == obj_skeleton)
+	{
+		room_goto_next();
+	}
+}
+else
+{
+	if(inhabiting == obj_persistentValuesTracker.target) {
+		obj_persistentValuesTracker.floorsTraversed++;
+		room_goto_next();
+	} else {
+		noTargetErrorAlpha = 1;
+		audio_play_sound(sou_notargeterror,9,false);
+	}
 }

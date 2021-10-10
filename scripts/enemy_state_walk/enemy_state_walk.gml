@@ -10,7 +10,7 @@ function enemy_state_walk(){
 	}
 	
 	// Time offset for animation frames. Should go 0, 1, 0, 2, 0, 1, etc.
-	offset = floor(current_time / 200) % 4;
+	offset = floor(current_time / 100) % 4;
 	if(offset == 2) offset = 0;
 	else if(offset == 3) offset = 2;
 	

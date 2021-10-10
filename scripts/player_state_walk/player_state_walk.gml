@@ -10,7 +10,11 @@ function player_state_walk(){
 	
 	var bbox_side;
 	var _tile = global.tile_size;
-	var _tilemap = obj_gameManager.CollisionMap
+	var _tilemap;
+	if(room = room0)
+		_tilemap = obj_gameManager.CollisionMap
+	else
+		_tilemap = layer_tilemap_get_id(layer_get_id("CollisionLayer"))
 	
 	var bbox_height = bbox_bottom-bbox_top;
 	var num_checks_height = ceil(bbox_height/global.tile_size) + 1;
@@ -96,7 +100,7 @@ function player_state_walk(){
 	}
 	
 	// Time offset for animation frames. Should go 0, 1, 0, 2, 0, 1, etc.
-	offset = floor(current_time / 200) % 4;
+	offset = floor(current_time / 100) % 4;
 	if(offset == 2) offset = 0;
 	else if(offset == 3) offset = 2;
 	

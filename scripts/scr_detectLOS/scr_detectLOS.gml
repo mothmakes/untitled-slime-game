@@ -1,8 +1,18 @@
 function scr_detectLOS(maxRange) {
-	var _player = obj_gameManager.player;
+	var _player;
+	if(room == room0)
+		_player = obj_gameManager.player;
+	else if(room == room_tutorial)
+		_player = obj_tutorialManager.player;
+		
 	var _start = [scr_roundm(x,16),scr_roundm(y,16)];
 	var _dest = [scr_roundm(_player.x,16),scr_roundm(_player.y,16)];
-	var _tilemap = obj_gameManager.CollisionMap;
+	
+	var _tilemap;
+	if(room = room0)
+		_tilemap = obj_gameManager.CollisionMap
+	else
+		_tilemap = layer_tilemap_get_id(layer_get_id("CollisionLayer"))
 
 	var _length = sqrt(sqr(_dest[0]-_start[0])+sqr(_dest[1]-_start[1]));
 
