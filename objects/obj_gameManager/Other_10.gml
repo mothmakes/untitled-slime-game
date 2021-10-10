@@ -136,3 +136,6 @@ for (var i=0;i<array_length_1d(rooms);i++) {
 		}
 	}
 }
+
+instance_create_layer(0,0,"Enemies",obj_skeleton);
+instance_create_layer(0,0,"Enemies",obj_stegosaurus);

@@ -12,14 +12,14 @@ if(image_index == 0) {
 		if(_num>0) {
 			//damage enemies
 			for(var i=0;i<_num;i++) {
-				sdm("hit enemies!");
+				//sdm("hit enemies!");
 				damageEntity(parent,enemyList[| i]);
 			}
 		}
 	} else {
 		if(place_meeting(x,y,obj_player)) {
 			//damage players
-			sdm("hit player!");
+			//sdm("hit player!");
 			damageEntity(parent,obj_player.id);
 		}
 	}

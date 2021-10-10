@@ -14,7 +14,7 @@ for(var i = 0; i < MAX_HP_PLAYER/2; ++i)
 }
 var _max_hp;
 if(obj_player.inhabiting != obj_player) {
-	if(instance_exists(obj_player.inhabiting)) _max_hp = obj_player.inhabiting.max_hp;
+	if(object_exists(obj_player.inhabiting)) _max_hp = obj_player.inhabiting.max_hp;
 	else _max_hp = 0;
 } else _max_hp = 0;
 
