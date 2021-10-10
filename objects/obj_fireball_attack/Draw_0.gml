@@ -1,10 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if(dir == DIRS.LEFT) hsp = -3;
-else if(dir == DIRS.RIGHT) hsp = 3;
-else if(dir == DIRS.UP) vsp = -3;
-else vsp = 3;
+if(dir == DIRS.LEFT) hsp = -ATTACK_SPEED_STEGO;
+else if(dir == DIRS.RIGHT) hsp = ATTACK_SPEED_STEGO;
+else if(dir == DIRS.UP) vsp = -ATTACK_SPEED_STEGO;
+else vsp = ATTACK_SPEED_STEGO;
 
 timer = current_time;
 

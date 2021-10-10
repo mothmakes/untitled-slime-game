@@ -1,7 +1,7 @@
 playerScore = 0;
 xp = 0;
 playerLevel = 0;
-gainedLevels = 10;
+gainedLevels = 0;
 floorsTraversed = 0;
 nextLevelThreshold = LEVEL_BASE_XP_COST;
 

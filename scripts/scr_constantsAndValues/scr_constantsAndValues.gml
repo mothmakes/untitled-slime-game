@@ -8,23 +8,23 @@ function scr_constantsAndValues(){
 		RIGHT = 270
 	}
 	#macro NON_COLLIDE_TILE_INDEX_START 23
-	#macro MAX_HP_PLAYER 30
-	#macro MAX_HP_SKELETON 4
-	#macro MAX_HP_STEGO 8
+	#macro MAX_HP_PLAYER 10
+	#macro MAX_HP_SKELETON (4 + (obj_persistentValuesTracker.levels[? obj_skeleton]))
+	#macro MAX_HP_STEGO (8 + (obj_persistentValuesTracker.levels[? obj_stegosaurus]))
 	
 	#macro ATTACK_SPEED_PLAYER 1
-	#macro ATTACK_SPEED_SKELETON 1
-	#macro ATTACK_SPEED_STEGO 1
+	#macro ATTACK_SPEED_SKELETON (1 + (obj_persistentValuesTracker.levels[? obj_skeleton]))
+	#macro ATTACK_SPEED_STEGO (1 + (obj_persistentValuesTracker.levels[? obj_stegosaurus]))
 	
-	#macro ATTACK_COOLDOWN_SKELETON 2
-	#macro ATTACK_COOLDOWN_STEGO 4
+	#macro ATTACK_COOLDOWN_SKELETON max(1,smoothstep(2,1,(obj_persistentValuesTracker.levels[? obj_skeleton]/10)))
+	#macro ATTACK_COOLDOWN_STEGO max(1,smoothstep(4,1,(obj_persistentValuesTracker.levels[? obj_stegosaurus]/10)))
 	
-	#macro ATTACK_DELAY_SKELETON 0.5;
-	#macro ATTACK_DELAY_STEGO 0.9;
+	#macro ATTACK_DELAY_SKELETON max(0.3,lerp(0.5,0.3,(obj_persistentValuesTracker.levels[? obj_skeleton]/10)))
+	#macro ATTACK_DELAY_STEGO max(0.4,smoothstep(0.9,0.4,(obj_persistentValuesTracker.levels[? obj_stegosaurus]/10)))
 	
 	#macro DAMAGE_PLAYER 1
-	#macro DAMAGE_SKELETON 2
-	#macro DAMAGE_STEGO 5
+	#macro DAMAGE_SKELETON (2 + (obj_persistentValuesTracker.levels[? obj_skeleton]))
+	#macro DAMAGE_STEGO (5 + (obj_persistentValuesTracker.levels[? obj_stegosaurus]))
 	
 	#macro ATTACK_DISTANCE_PLAYER global.tile_size * 1
 	#macro ATTACK_DISTANCE_SKELETON global.tile_size * 1.5
