@@ -12,3 +12,7 @@ levels[? obj_stegosaurus] = 0;
 spentLevels = ds_map_create();
 spentLevels[? obj_skeleton] = 0;
 spentLevels[? obj_stegosaurus] = 0;
+
+targetArray = [obj_skeleton,obj_stegosaurus];
+
+target = noone;

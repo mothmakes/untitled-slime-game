@@ -9,6 +9,3 @@ if(room_get_name(room) == "room_betweenlevel") {
 	//gainedLevels = 0;
 }
 
-if(room_get_name(room) == "room0") {
-	
-}

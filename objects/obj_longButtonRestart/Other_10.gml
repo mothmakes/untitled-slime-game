@@ -17,6 +17,8 @@ with(obj_persistentValuesTracker) {
 
 	spentLevels[? obj_skeleton] = 0;
 	spentLevels[? obj_stegosaurus] = 0;
+	
+	target = noone;
 }
 
 room_goto(room0);

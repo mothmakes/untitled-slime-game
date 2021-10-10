@@ -35,3 +35,9 @@ draw_text(10,display_get_gui_height()-80,"Level " + string(obj_persistentValuesT
 
 var percent = (obj_persistentValuesTracker.xp/obj_persistentValuesTracker.nextLevelThreshold)*100;
 draw_healthbar(10,display_get_gui_height()-20,display_get_gui_width()-10,display_get_gui_height()-40,percent,c_black,c_red,c_green,0,true,true);
+
+if(obj_persistentValuesTracker.target != noone && room == room0) {
+	draw_set_halign(fa_right);
+	draw_text(display_get_gui_width()-20,gui_h*0.13,"Target:");
+	draw_sprite_ext(obj_persistentValuesTracker.target.sprite_index,0,gui_w*0.93,gui_h*0.2,4,4,0,c_white,1);
+}

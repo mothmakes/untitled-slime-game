@@ -22,4 +22,6 @@ draw_text(gui_w*0.35,gui_h*0.50,"Level " + string(obj_persistentValuesTracker.le
 draw_text(gui_w*0.65,gui_h*0.5,"Spent Levels: " + string(obj_persistentValuesTracker.spentLevels[? obj_stegosaurus]));
 
 draw_text(gui_w*0.05,gui_h*0.9,"Levels To Spend " + string(obj_persistentValuesTracker.gainedLevels));
-draw_text(gui_w*0.72,gui_h*0.92,"Continue");
+
+draw_set_halign(fa_middle);
+draw_text(gui_w*0.7,gui_h*0.88,"Continue");

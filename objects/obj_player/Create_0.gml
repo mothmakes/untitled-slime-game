@@ -5,6 +5,8 @@ enemyToInhabit = noone;
 attacking = false;
 dir = DIRS.DOWN;
 
+noTargetErrorAlpha = 0;
+
 takeover_enabled = true;
 takeover_range = 3;
 takeover_percent = 0;
