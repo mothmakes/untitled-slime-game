@@ -3,6 +3,7 @@
 function enemy_state_dead(){
 	if(state_new) {
 		gainXP(id);
+		audio_play_sound(sou_deathsound,3,false);
 	}
 	image_blend = c_dkgrey;
 	if(state_timer > room_speed * DEATH_TIME) {

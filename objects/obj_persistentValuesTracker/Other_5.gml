@@ -9,3 +9,4 @@ if(room_get_name(room) == "room_betweenlevel") {
 	//gainedLevels = 0;
 }
 
+audio_stop_all();

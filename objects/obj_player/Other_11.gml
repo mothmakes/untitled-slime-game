@@ -5,5 +5,5 @@ if(inhabiting == obj_persistentValuesTracker.target) {
 	room_goto_next();
 } else {
 	noTargetErrorAlpha = 1;
-	// Play sound!
+	audio_play_sound(sou_notargeterror,9,false);
 }

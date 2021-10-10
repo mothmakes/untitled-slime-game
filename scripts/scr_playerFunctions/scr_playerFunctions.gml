@@ -34,6 +34,7 @@ function damageEntity(_damager,_damagee) {
 			targetHP = 0.01;
 		}
 	}
+	audio_play_sound(sou_hit,8,false);
 	_damagee.hp = targetHP;
 	return;
 }

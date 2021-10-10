@@ -9,6 +9,5 @@ if(obj_persistentValuesTracker.gainedLevels > 0) {
 	obj_persistentValuesTracker.spentLevels[? object]++;
 	obj_persistentValuesTracker.gainedLevels--;
 } else {
-	// Play sound here to indicate failure!
-	
+	audio_play_sound(sou_clickerror,9,false);
 }

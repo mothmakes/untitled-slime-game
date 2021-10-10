@@ -11,3 +11,6 @@ restart.image_yscale = 5;
 exitgame = instance_create_layer(gui_w*0.75,gui_h*0.9,"Instances",obj_longButtonExit);
 exitgame.image_xscale = 5;
 exitgame.image_yscale = 5;
+
+audio_play_sound(sou_fail,1,false);
+audio_play_sound(sou_gameovermusic,1,true);

@@ -12,3 +12,5 @@ enemyList = ds_list_create();
 hitList = ds_list_create();
 
 parent = noone;
+
+audio_play_sound(sou_fireball,8,false);

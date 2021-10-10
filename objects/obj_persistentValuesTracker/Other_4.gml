@@ -6,4 +6,5 @@ if(room_get_name(room) == "room0") {
 	if(instance_number(target) == 1) {
 		room_goto(room0);
 	}
+	audio_play_sound(sou_dungeonmusic,7,true);
 }
