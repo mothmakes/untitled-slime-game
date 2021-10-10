@@ -20,6 +20,7 @@
     {"id":{"name":"tileset_collisions","path":"tilesets/tileset_collisions/tileset_collisions.yy",},"order":1,},
     {"id":{"name":"obj_fireball_attack","path":"objects/obj_fireball_attack/obj_fireball_attack.yy",},"order":1,},
     {"id":{"name":"font_title","path":"fonts/font_title/font_title.yy",},"order":0,},
+    {"id":{"name":"obj_gameoverhud","path":"objects/obj_gameoverhud/obj_gameoverhud.yy",},"order":19,},
     {"id":{"name":"scr_getRandomPointInCircle","path":"scripts/scr_getRandomPointInCircle/scr_getRandomPointInCircle.yy",},"order":0,},
     {"id":{"name":"tileset_environ","path":"tilesets/tileset_environ/tileset_environ.yy",},"order":2,},
     {"id":{"name":"obj_arrowButtonUp","path":"objects/obj_arrowButtonUp/obj_arrowButtonUp.yy",},"order":16,},
