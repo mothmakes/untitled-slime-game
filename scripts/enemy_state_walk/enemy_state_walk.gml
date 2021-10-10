@@ -10,7 +10,7 @@ function enemy_state_walk(){
 	}
 	
 	// Time offset for animation frames. Should go 0, 1, 0, 2, 0, 1, etc.
-	var offset = (current_time / 333) % 4;
+	offset = floor(current_time / 200) % 4;
 	if(offset == 2) offset = 0;
 	else if(offset == 3) offset = 2;
 	
@@ -29,7 +29,7 @@ function enemy_state_walk(){
 				if(dir == DIRS.UP) image_index = 6 + offset;
 				else if(dir == DIRS.DOWN) image_index = 3 + offset;
 				else if(dir == DIRS.LEFT) image_index = 0 + offset;
-				else image_index = 0;
+				else image_index = 9 + offset;
 			}
 			break;
 	}

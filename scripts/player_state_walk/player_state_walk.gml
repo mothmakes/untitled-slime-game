@@ -63,6 +63,7 @@ function player_state_walk(){
 	if(hsp == 0 && vsp == 0) state_switch("Idle");
 	
 	
+	/*
 	// to set the animations if the player is moving
 	if(hsp != 0) {
 		if(key_right) {
@@ -79,12 +80,41 @@ function player_state_walk(){
 			dir = DIRS.UP;
 			image_index = 4;
 		}
-		
 		if(key_down) {
 			dir = DIRS.DOWN;
 			image_index = 2;
 		}
+	}
+	*/
 	
+	if(abs(vsp) > abs(hsp)) {
+		if(vsp>0) dir = DIRS.DOWN;
+		if(vsp<0) dir = DIRS.UP;
+	} else {
+		if(hsp>0) dir = DIRS.RIGHT;
+		if(hsp<0) dir = DIRS.LEFT;
+	}
+	
+	// Time offset for animation frames. Should go 0, 1, 0, 2, 0, 1, etc.
+	offset = floor(current_time / 200) % 4;
+	if(offset == 2) offset = 0;
+	else if(offset == 3) offset = 2;
+	
+	switch(inhabiting)
+	{
+		// Stego has more anim frames than skele, so the logic is different.
+		case obj_stegosaurus:
+			if(dir == DIRS.UP) image_index = 6 + offset;
+			else if(dir == DIRS.DOWN) image_index = 3 + offset;
+			else if(dir == DIRS.LEFT) image_index = 0 + offset;
+			else image_index = 9 + offset;
+			break;
+		default:
+			if(dir == DIRS.RIGHT) image_index = 3;
+			else if(dir == DIRS.LEFT) image_index = 1;
+			else if(dir == DIRS.UP) image_index = 4;
+			else image_index = 2;
+			break;
 	}
 	
 }

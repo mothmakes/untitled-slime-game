@@ -8,7 +8,7 @@ function scr_constantsAndValues(){
 		RIGHT = 270
 	}
 	#macro NON_COLLIDE_TILE_INDEX_START 23
-	#macro MAX_HP_PLAYER 3
+	#macro MAX_HP_PLAYER 30
 	#macro MAX_HP_SKELETON 4
 	#macro MAX_HP_STEGO 8
 	

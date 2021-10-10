@@ -18,6 +18,9 @@ max_hp = MAX_HP_PLAYER;
 damage = DAMAGE_PLAYER;
 inhabited_hp = 0;
 
+vsp = 0;
+hsp = 0;
+
 state_create("Idle",player_state_idle);
 state_create("Walk",player_state_walk);
 state_create("Attack",player_state_attack);
